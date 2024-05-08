@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi PORTAFOLIO</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("1p.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+      }
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .trabajos {
+        background-color: #3498db;
+      }
+      .tareas {
+        background-color: #2ecc71;
+      }
+      .horario {
+        background-color: #f1c40f;
+      }
+      .alarma {
+        background-color: #e74c3c;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .window {
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .window img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      .course-link {
+        display: block;
+        text-align: center;
+        color: #fff;
+        background-color: #2980b9;
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .course-link:hover {
+        background-color: #1f618d;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <header style="background-image: url('ruta_de_la_imagen.jpg')">
+      <h1>Mi PORTAFOLIO</h1>
+      <nav>
+        <a class="trabajos" href="trabajos.html" target="_blank">Trabajos</a>
+        <a class="tareas" href="tareas.html" target="_blank">Tareas</a>
+        <a class="horario" href="horario.html" target="_blank">Horario</a>
+        <a class="alarma" href="alarma.html" target="_blank"
+          >Alarma de Comida</a
+        >
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="window" id="trabajos">
+        <img src="giop.jpg" alt="Mi foto" />
+        <h2>GIOVANNI BIERHOF CCALLATA ANCCORI</h2>
+        <p>
+          "Soy un hombre de estatura imponente, con una altura que me hace
+          destacar en cualquier multitud. Mi físico refleja mi dedicación al
+          deporte y al cuidado de mi cuerpo. Me enorgullezco de mi constitución
+          atlética y musculosa, fruto de años de entrenamiento y compromiso con
+          un estilo de vida activo y saludable. Mi postura erguida y mi
+          expresión facial enérgica revelan mi confianza en mí mismo y en mis
+          habilidades físicas. Además de mi pasión por el deporte, también tengo
+          un profundo compromiso con mis estudios. Me considero un estudiante
+          diligente y comprometido, capaz de mantener un equilibrio entre mis
+          actividades deportivas y académicas. Disfruto desafiándome
+          intelectualmente y buscando nuevas oportunidades de aprendizaje. Mi
+          habilidad para comprender conceptos complejos y mi capacidad para
+          resolver problemas me han permitido destacarme en el ámbito académico.
+        </p>
+      </div>
+      <div class="window" id="tareas">
+        <img src="giop2.jpg" alt="Mi foto" />
+        <h2>GIO LO MAS RESALTANTE</h2>
+        <p>
+          "Soy un hombre de estatura imponente, con una altura que me hace
+          destacar en cualquier multitud. Mi físico refleja mi dedicación al
+          deporte y al cuidado de mi cuerpo. Desde una edad temprana, el deporte
+          ha sido una parte integral de mi vida, y me enorgullezco de mi
+          constitución atlética y musculosa, resultado de años de entrenamiento
+          y compromiso con un estilo de vida activo y saludable.
+        </p>
+      </div>
+    </div>
+  </body>
+  <body>
+    <header>
+      <h1 style="background-color: #3498db; padding: 10px; border-radius: 5px">
+        curzos UNAM
+      </h1>
+    </header>
+    <div class="container">
+      <div class="window" id="cursos">
+        <img src="arquitectura de computadoras.jpg" alt="Curso 1" />
+        <img src="meton.png" alt="Curso 2" />
+        <img src="ra.jpg" alt="Curso 3" />
+        <img src="sistedist.jpg" alt="Curso 4" />
+        <img src="pimag.jpg" alt="Curso 5" />
+        <img src="meton.png" alt="Curso 6" />
+        <a
+          class="course-link"
+          href="https://www.sigeun.unam.edu.pe/modulos/modaulavirtual/user/perfil"
+          target="_blank"
+          >Ver más detalles</a
+        >
+      </div>
+    </div>
+    <div class="container">
+      <div class="window" id="fecha-hora">
+        <h2>Fecha y Hora Actual</h2>
+        <p id="fecha"></p>
+        <p id="hora"></p>
+      </div>
+    </div>
+
+    <script>
+      // Función para actualizar la hora y la fecha cada segundo
+      function actualizarFechaHora() {
+        var ahora = new Date();
+        var fecha = ahora.toLocaleDateString();
+        var hora = ahora.toLocaleTimeString();
+        document.getElementById("fecha").innerText = "Fecha: " + fecha;
+        document.getElementById("hora").innerText = "Hora: " + hora;
+      }
+
+      // Actualizar la fecha y la hora inicialmente
+      actualizarFechaHora();
+
+      // Actualizar la fecha y la hora cada segundo
+      setInterval(actualizarFechaHora, 1000);
+    </script>
+  </body>
+</html>
